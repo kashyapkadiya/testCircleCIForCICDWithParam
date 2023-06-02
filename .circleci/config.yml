@@ -2,6 +2,15 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+parameters:
+  action:
+    type: enum
+    enum: [build, report]
+    default: build
+  branch-name:
+    type: string
+    default: "3.8.1"
+    
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
